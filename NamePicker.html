@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student GPA Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some space between the tables */
+        #studentRatings {
+            margin-top: 20px;
+        }
+
+        #randomStudent {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student GPA Tracker</h1>
+    <form id="studentForm">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" required>
+        <label for="studentGPA">GPA:</label>
+        <input type="number" id="studentGPA" step="0.1" min="0" max="4.0" required>
+        <label for="studentClasses">Number of Classes:</label>
+        <input type="number" id="studentClasses" min="1" required>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Student List</h2>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>GPA</th>
+                <th>Classes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student data will be inserted here -->
+        </tbody>
+    </table>
+
+    <h2>Student Ratings</h2>
+    <ul id="studentRatings">
+        <!-- Ratings will be inserted here -->
+    </ul>
+
+    <div id="randomStudent">
+        <!--<h2>Select a Random Student</h2>-->
+        <button id="selectRandomStudent">Select Random Student</button>
+        <p id="selectedStudent"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
